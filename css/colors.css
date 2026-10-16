@@ -1,0 +1,20 @@
+/*
+ * 대구대학교 로고 색상 (PC·모바일 공통)
+ * 아래 값은 임시값입니다. 공식 UI 가이드의 전용색상(HEX)을 받으면 맨 위 세 줄만 바꾸세요.
+ */
+:root {
+  --du-green: #007870;      /* 주색 */
+  --du-green-dark: #086058; /* 어두운 그린 */
+  --du-lime: #D8E040;       /* 포인트 */
+
+  --ink: #1d2b29;
+  --ink-soft: #55625f;
+  --paper: #f6f5ee;
+  --card-bg: #fbfaf5;
+  --line: #d9ddd5;
+  --tint: color-mix(in srgb, var(--du-green) 9%, white);
+
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  color: var(--ink);
+  -webkit-text-size-adjust: 100%;
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>대구대학교 문헌정보학과</title>
+  <meta name="description" content="어서와~ 문헌정보학과는 처음이지? 정보를 찾고, 정리하고, 연결하는 대구대 문헌정보학과를 카드로 만나 보세요.">
+  <meta name="theme-color" content="#086058">
+
+  <!-- 카카오톡·SNS 공유 미리보기 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="어서와~ 문헌정보학과는 처음이지? | 대구대학교">
+  <meta property="og:description" content="어서와~ 문헌정보학과는 처음이지? 수업·공간·학과생활을 카드로 만나 보세요.">
+  <meta property="og:image" content="images/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap">
+  <link rel="stylesheet" href="css/colors.css">
+  <link rel="stylesheet" href="css/logo.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+  <header class="m-header">
+    <a class="m-brand" href="https://lis.daegu.ac.kr" target="_blank" rel="noopener" title="문헌정보학과 홈페이지로 이동">
+      <span class="m-brand-en">DAEGU UNIVERSITY</span>
+      <span class="m-brand-ko">대구대학교 문헌정보학과</span>
+    </a>
+    <div class="m-header-btns">
+      <button type="button" class="m-btn" data-share>공유</button>
+      <button type="button" class="m-btn m-btn-lime" data-open-menu>전체</button>
+    </div>
+  </header>
+
+  <!-- 첫 화면: '어서와~ 문헌정보학과는 처음이지?' -->
+  <section class="m-intro" id="intro" aria-label="시작 화면">
+    <div class="m-intro-inner">
+      <div id="intro-logo"></div>
+      <p class="m-intro-sub">대구대학교 문헌정보학과</p>
+      <p class="m-intro-desc">정보를 찾고, 정리하고, 연결하는 공부를 해요.<br>문헌정보학과의 수업과 공간, 학과생활을<br>카드로 먼저 만나 보세요.</p>
+      <button type="button" class="m-intro-start" data-start>카드 넘겨 보기 &rarr;</button>
+    </div>
+    <img class="m-intro-char" id="intro-char" alt="" aria-hidden="true">
+  </section>
+
+  <main class="m-viewer" aria-roledescription="carousel" aria-label="문헌정보학과 소개">
+    <div class="track" id="track"></div>
+    <p class="m-hint" id="hint">좌우로 넘겨보세요 &rarr;</p>
+  </main>
+
+  <nav class="m-bar" aria-label="카드 넘기기">
+    <button type="button" class="m-nav" data-prev aria-label="이전 카드">&#10094;</button>
+    <div class="m-status">
+      <p class="m-counter"><b id="counter-now">01</b> / <span id="counter-total">21</span></p>
+      <div class="m-progress" aria-hidden="true"><i id="progress-bar"></i></div>
+    </div>
+    <button type="button" class="m-nav" data-next aria-label="다음 카드">&#10095;</button>
+  </nav>
+
+  <dialog class="m-menu" id="menu" aria-label="전체 카드 목록">
+    <div class="m-menu-head">
+      <h2>전체 카드 <span id="menu-total">21</span>장</h2>
+      <button type="button" class="m-menu-close" data-close-menu aria-label="닫기">&times;</button>
+    </div>
+    <ol class="m-list" id="menu-list"></ol>
+    <div class="m-menu-foot">
+      <a class="m-action m-action-primary" href="tel:053-850-6350">학과에 전화로 문의하기</a>
+      <a class="m-action" href="https://www.instagram.com/daegu_univ_lis/" target="_blank" rel="noopener">인스타그램 @daegu_univ_lis</a>
+      <a class="m-action" href="index.html?pc">PC 버전으로 보기 · PDF 저장</a>
+      <p class="m-note">정확한 모집 및 학사 정보는 해당 학년도의 공식 안내를 확인해 주세요.</p>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/assets.js"></script>
+  <script src="js/cards.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/mobile.js"></script>
+</body>
+</html>

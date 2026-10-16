@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>대구대학교 문헌정보학과</title>
+  <meta name="description" content="어서와~ 문헌정보학과는 처음이지? 정보를 찾고, 정리하고, 연결하는 대구대 문헌정보학과를 카드로 만나 보세요.">
+  <meta name="theme-color" content="#007870">
+  <script>
+    // 휴대폰에서 열면 모바일 버전으로 이동 (주소에 ?pc 를 붙이면 PC 버전 유지)
+    if (window.matchMedia('(max-width: 640px)').matches && !/[?&]pc\b/.test(location.search)) {
+      location.replace('mobile.html' + location.hash);
+    }
+  </script>
+
+  <!-- 카카오톡·SNS 공유 미리보기 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="어서와~ 문헌정보학과는 처음이지? | 대구대학교">
+  <meta property="og:description" content="어서와~ 문헌정보학과는 처음이지? 수업·공간·학과생활을 카드로 만나 보세요.">
+  <meta property="og:image" content="images/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap">
+  <link rel="stylesheet" href="css/colors.css">
+  <link rel="stylesheet" href="css/logo.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="https://lis.daegu.ac.kr" target="_blank" rel="noopener" title="문헌정보학과 홈페이지로 이동">
+      <span class="brand-en">DAEGU UNIVERSITY</span>
+      <span class="brand-ko">대구대학교 문헌정보학과</span>
+    </a>
+    <button type="button" class="btn-share" data-share>링크 공유</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="hero-eyebrow"><span id="card-total">20</span> CARDS</p>
+      <div class="hero-title">
+        <div id="intro-logo"><h1>어서와~ 문헌정보학과는 처음이지?</h1></div>
+        <img class="hero-char" id="intro-char" alt="" aria-hidden="true">
+      </div>
+      <p class="hero-sub">대구대학교 문헌정보학과</p>
+      <p class="hero-desc">정보를 찾고, 정리하고, 연결하는 공부를 해요. 문헌정보학과의 수업과 공간, 학과생활을 카드로 먼저 만나 보세요.</p>
+    </section>
+
+    <section class="viewer" aria-roledescription="carousel" aria-label="문헌정보학과 소개">
+      <div class="viewer-stage">
+        <button type="button" class="nav nav-prev" aria-label="이전 카드" data-prev>&#10094;</button>
+        <div class="track" id="track" tabindex="0" aria-live="polite"></div>
+        <button type="button" class="nav nav-next" aria-label="다음 카드" data-next>&#10095;</button>
+      </div>
+      <div class="viewer-status">
+        <div class="progress" aria-hidden="true"><i id="progress-bar"></i></div>
+        <p class="counter"><b id="counter-now">01</b> / <span id="counter-total">20</span></p>
+        <p class="hint" id="hint">좌우로 넘겨보세요</p>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button type="button" class="action" data-open-grid>전체 <span id="grid-total">20</span>장 한눈에 보기</button>
+      <button type="button" class="action" data-print>PDF로 저장하기</button>
+      <a class="action action-primary" href="tel:053-850-6350">학과에 문의하기</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="foot-name">대구대학교 사회과학대학 문헌정보학과</p>
+    <ul class="foot-links">
+      <li><a href="https://lis.daegu.ac.kr" target="_blank" rel="noopener">학과 홈페이지</a></li>
+      <li><a href="https://www.instagram.com/daegu_univ_lis/" target="_blank" rel="noopener">인스타그램 @daegu_univ_lis</a></li>
+      <li><a href="tel:053-850-6350">학과사무실 053-850-6350</a></li>
+      <li><a href="mobile.html">모바일 버전으로 보기</a></li>
+    </ul>
+    <p class="foot-note">정확한 모집 및 학사 정보는 해당 학년도의 공식 안내를 확인해 주세요.</p>
+  </footer>
+
+  <dialog class="grid-dialog" id="grid-dialog" aria-label="전체 카드 보기">
+    <div class="grid-head">
+      <h2>전체 카드</h2>
+      <button type="button" class="grid-close" data-close-grid aria-label="닫기">&times;</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- 인쇄(PDF 저장)용: 모든 카드를 한 장씩 -->
+  <div class="print-deck" id="print-deck" aria-hidden="true"></div>
+
+  <script src="js/assets.js"></script>
+  <script src="js/cards.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
