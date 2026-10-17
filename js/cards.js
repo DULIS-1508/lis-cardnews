@@ -244,7 +244,7 @@ window.CARDS = [
     blocks: [
       { type: 'contact', items: [
         { label: '학과 홈페이지', value: 'lis.daegu.ac.kr', href: 'https://lis.daegu.ac.kr' },
-        { label: '인스타그램', value: 'https://www.instagram.com/daegu_univ_lis/', href: 'https://www.instagram.com/daegu_univ_lis/' },
+        { label: '인스타그램', value: '@daegu_univ_lis', href: 'https://www.instagram.com/daegu_univ_lis/' },
         { label: '학과사무실', value: '053-850-6350', href: 'tel:053-850-6350' },
         { label: '주소', value: '경북 경산시 진량읍 대구대로 201', href: '' }
       ] },
