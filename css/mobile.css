@@ -130,6 +130,8 @@ a { color: inherit; }
 }
 .m-action-primary { background: var(--du-green); color: #fff; }
 .m-note { margin: 2px 0 0; font-size: 12px; color: var(--ink-soft); text-align: center; }
+.m-menu-brand { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 2px; font-size: 13px; font-weight: 700; color: var(--du-green-dark); text-decoration: none; }
+.m-menu-brand img { width: 32px; height: 32px; }
 
 /* ---------- 토스트 ---------- */
 .toast {
